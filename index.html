@@ -1,0 +1,55 @@
+<doctype html>
+<html lang="en">
+    <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=devics-width,user-scalable=no,intial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta http-equiv="X-UA-comapatible"content="ie=edge">
+<title>document</title>
+<link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+<link rel="stylesheet"href="style.css">
+    </head>
+    <body>
+        <section>
+            <div class="toggle-btn">
+             <i class="fas fa-adjust"><i></i></i>
+            </div>
+            <div class="container">
+            <div class="content">
+                <div class="content-image">
+                    <img src="workout1.jpeg" alt="">
+                    </div>
+                    <div class="content-text">
+                        <h1 class="text">the strength within</h1>
+                        <h2 class="subtitle">unleesh your inner bsast</h2>
+                        <p class="paragraph">
+                            Public Health England has teamed up with the NHS for this awesome campaign to get us off our lockdown backsides and get us up and moving.
+                             No more bingeing on crisps, sitting on sofas made from loo rolls watching The Tiger King - the "LET'S D
+                        </p>O THIS" 
+                             campaign is a wake up call to shake off the static life that Covid-19 has brought.
+                        <a href="https://www.marketingweek.com/government-anti-obesity-campaign/" class="cta">learn more</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        let body = document.body;
+        let togglebtn = document.querySelector('.toggle-Btn');
+        let currenttheme = localStorage.getItem('current theme');
+
+        if(currenttheme){
+            body.classlist.add('dark-theme')
+        }
+
+        togglebtn.addEventListener('click', function () {
+            body.classList.toggle('dark-theme');
+            if(body.classlist.contanins('dark-theme')){
+                localStorage.setItem('current theme');
+            }else{
+                localStorage.removeItem('current theme')
+            }
+        })
+    </script>
+    </body>
+</html>
